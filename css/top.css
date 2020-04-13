@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+body{
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+}
+
+.CenturyGothicBold {
+  font-family: century-gothic, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a {
+  color: #7F7F77;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+#header{
+  position: absolute;
+  top: 7.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 997;
+}
+
+#header .logo {
+  width: 282px;
+}
+
+a img{
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+
+/* -------------------  gnavBtn  begin  ---------------------------- */
+body.opened #gnavBtn span {
+  opacity: 0;
+}
+
+body.opened #gnavBtn span::before, body.opened #gnavBtn span::after {
+  transform-origin: 50%;
+}
+
+body.opened #gnavBtn span::before{
+  top: 50%;
+  transform: translateY(-50%) rotate(-25deg);
+}
+
+body.opened #gnavBtn span::after{
+  top: 50%;
+  transform: translateY(-50%) rotate(25deg);
+} 
+
+/*menu*/
+/* 
+.menu{
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  z-index: 99;
+}
+.menu__line{
+  background: #a9808C;
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition:transform .3s;
+  width: 100%;
+}
+.menu__line--center{
+  top: 9px;
+}
+.menu__line--bottom{
+  bottom: 0;
+}
+.menu__line--top.active{
+  top: 8px;
+  transform: rotate(45deg);
+}
+.menu__line--center.active{
+  transform:scaleX(0);
+}
+.menu__line--bottom.active{
+  bottom: 10px;
+  transform: rotate(135deg);
+} */
+/* --------------------------------------------- */
+#gnavBtn {
+  position: fixed;
+  top: 5.5rem;
+  right: 5.5rem;
+  z-index: 999;
+  width: 5.4rem;
+  height: 3.6rem;
+  cursor: pointer;
+}
+
+#gnavBtn span {
+  transition: .25s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 4px;
+  background-color: #a9808C;
+}
+
+#gnavBtn span::before, #gnavBtn span::after{
+  /* css変化のspeed */
+  transition: .25s ease-out;
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #a9808C;
+}
+
+#gnavBtn::before{
+  top: 0;
+}
+
+#gnavBtn::after {
+  top: 90%;
+} 
+/* ----------------------------------------------------- */
+body.opened #gnav {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#gnav {
+  transition: .25s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  display: flex;
+  /* flexbox内の要素を積み重なるように配置 */
+  flex-direction: column;
+  /* 各アイテムを均等に配置し最初のアイテムは先頭に寄せ、 最後アイテムは末尾に寄せる */
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 8vh 0;
+  background-color: #fff;
+}
+
+#gnav .logo img {
+  width: 15.0rem;
+}
+
+#gnav .list {
+  width: 100%;
+}
+
+#gnav .list li a {
+  transition: .25s ease-out;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 4vh;
+}
+
+#gnavi .list li a span {
+  display: block;
+  color: #B28D98;
+}
+
+#gnavi .list li a span.en {
+  margin-bottom: 1.5rem;
+  font-size: 4.0rem;
+  line-height: 1;
+}
+
+#gnavi .list li a span.jp {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#gnav .linkList {
+  display: flex;
+  justify-content: center;
+}
+
+#gnav .linkList li {
+  margin: 0 3.0rem;
+}
+
+#gnav .linkList li a {
+  position: relative;
+  padding: 0 0 0.5rem 0.2rem;
+  font-size: 1.8rem;
+  color: #B28D98;
+}
+
+#gnavi .linkList li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #B28D98;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+
+/*----   slide show  begin   ----*/
+/* 全体のスタイル */
+.swiper-container {
+  height: 100vh;
+}
+.swiper1 {
+	width: 50%;
+  height: 100vh;
+  float: left;
+}
+/* 全スライド共通スタイル */
+.swiper1 .swiper-slide {
+	color: #ffffff;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 250px;
+}
+/* 2個目のSwiper全体のスタイル */
+.swiper2 {
+	width: 50%;
+  height: 100vh;
+  float: right;
+}
+/* 2個目のSwiperのスライドのスタイル */
+.swiper2 .swiper-slide {
+	color: #ffffff;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 250px;
+}
+
+/* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
+.swiper-slide:nth-child(4n+1) {
+	background-color: #EECB27;
+}
+/* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
+.swiper-slide:nth-child(4n+2) {
+	background-color: #E13239;
+}
+/* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
+.swiper-slide:nth-child(4n+3) {
+	background-color: #1F1762;
+}
+/* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
+.swiper-slide:nth-child(4n+4) {
+	background-color: #BEDAE5;
+}
