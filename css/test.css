@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/*menu*/
+.menu{
+	height: 20px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 30px;
+	z-index: 99;
+}
+.menu__line{
+	background: rgb(219, 61, 61);
+	display: block;
+	height: 2px;
+	position: absolute;
+	transition:transform .3s;
+	width: 100%;
+}
+.menu__line--center{
+	top: 9px;
+}
+.menu__line--bottom{
+	bottom: 0;
+}
+.menu__line--top.active{
+	top: 8px;
+	transform: rotate(45deg);
+}
+.menu__line--center.active{
+	transform:scaleX(0);
+}
+.menu__line--bottom.active{
+	bottom: 10px;
+	transform: rotate(135deg);
+}
+
+/*gnav*/
+.gnav{
+	background: rgba(0,0,0,0.8);
+	display: none;
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: 98;
+}
+.gnav__wrap{
+	align-items:center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+}
+.gnav__menu__item{
+	margin: 40px 0;
+}
+.gnav__menu__item a{
+	color: #fff;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 40px;
+	text-decoration: none;
+	transition: .5s;
+}
+.gnav__menu__item a:hover{
+	color: #666;
+}
+
+.hero{
+	background-image: url(../img/pochi1.jpg);
+	background-position: 50% 50%;
+	background-size: cover;
+	height: 100vh;
+}
+
+/* --------------------  gnavBtn  begin  ----------------------------- */
+#gnavBtn {
+  position: fixed;
+  top: 5.5rem;
+  right: 5.5rem;
+  z-index: 999;
+  width: 5.4rem;
+  height: 3.6rem;
+  cursor: pointer;
+}
+
+#gnavBtn span {
+  transition: .25s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 4px;
+  background-color: #a9808C;
+}
+
+#gnavBtn span::before, #gnavBtn span::after{
+  /* css変化のspeed */
+  transition: .25s ease-out;
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #a9808C;
+}
+
+#gnavBtn::before{
+  top: 0;
+}
+
+#gnavBtn::after {
+  top: 90%;
+} 
