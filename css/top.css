@@ -14,7 +14,7 @@ header{
 }
 
 .CenturyGothicBold {
-  font-family: century-gothic, sans-serif;
+  font-family: 'Pathway Gothic One', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -49,6 +49,14 @@ img {
   max-width: 100%;
   width: 100%;
   height: auto;
+}
+
+.view_sp {
+  display: none !important;
+}
+
+.view_ie {
+  display: none;
 }
 
 /*--------------------  menu  begin   -----------------------*/
@@ -120,7 +128,6 @@ img {
 }
 
 #gnav_wrap {
-  /* position: absolute; */
   top: 0;
   left: 0;
   display: flex;
@@ -132,16 +139,16 @@ img {
   box-sizing: border-box;
 }
 
-#gnav .logo img {
-
-  width: 15.0rem;
+#gnav #gnav_wrap .logo img {
+  width: 12.0rem;
+  margin-bottom: 1.0rem;
 }
 
-#gnav .list {
+#gnav #gnav_wrap .list {
   width: 100%;
 }
 
-#gnav .list li a {
+#gnav #gnav_wrap .list li a {
   transition: .25s ease-out;
   box-sizing: border-box;
   display: flex;
@@ -151,39 +158,51 @@ img {
   padding: 4vh;
 }
 
-#gnavi .list li a span {
+#gnav #gnav_wrap .list li a span {
   display: block;
   color: #B28D98;
+  font-size: 3.0rem;
+  /* font-size: large; */
 }
 
-#gnavi .list li a span.en {
+#gnav #gnav_wrap .list li a span.en{
   margin-bottom: 1.5rem;
-  font-size: 4.0rem;
+  font-size: 3.0rem;
   line-height: 1;
 }
 
-#gnavi .list li a span.jp {
-  font-size: 1.3rem;
+#gnav #gnav_wrap .list li a span.jp {
+  font-size: 1.0rem;
   font-weight: bold;
 }
 
-#gnav .linkList {
+#gnav #gnav_wrap .linkList {
   display: flex;
   justify-content: center;
+  /* list-style: none; */
 }
 
-#gnav .linkList li {
+#gnav #gnav_wrap .linkList li {
   margin: 0 3.0rem;
 }
 
-#gnav .linkList li a {
+#gnav #gnav_wrap .linkList li a {
   position: relative;
   padding: 0 0 0.5rem 0.2rem;
   font-size: 1.8rem;
   color: #B28D98;
+  display: inline-block;
+  text-decoration: none;
 }
 
-#gnavi .linkList li a::after {
+#gnav #gnav_wrap .linkList li a::after {
+  /* border-bottom: solid 2px #f00;
+  bottom: 0;
+  content: "";
+  display: block;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  width: 0; */
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -195,6 +214,62 @@ img {
   transform-origin: right top;
   transition: transform .3s;
 }
+
+#gnav #gnav_wrap .linkList li a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+/*-------------  sns btn begin   ---------------*/
+#gnav .snsBtn {
+  margin-top: 2.0rem;
+  display: flex;
+  justify-content: center;
+}
+
+#gnav .snsBtn .twitter {
+  margin: 0 2.5rem;
+}
+
+#gnav .snsBtn .instagram {
+  margin: 0 2.5rem;
+}
+
+.defs{
+  display: none;
+}
+
+#gnav .snsBtn .twitter a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#gnav .snsBtn .instagram a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#gnav .snsBtn .twitter a svg{
+	width: 3.5rem;
+  height: 3.5rem;
+  fill: #B28D98;
+}
+
+#gnav .snsBtn .instagram a svg{
+	width: 3.5rem;
+  height: 3.5rem;
+  fill: #B28D98;
+}
+
+/*--------------  sns btn end  -------------------- */
+
 
 /*----   slide show  begin   ----*/
 /* 全体のスタイル */
@@ -245,3 +320,70 @@ img {
 .swiper-slide:nth-child(4n+4) {
 	background-color: #BEDAE5;
 }
+
+/* -----------  main  contents begin ------------------- */
+    /* into  begin  */
+    main#home #intro {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 70.0rem;
+      background-image: url(../img/intro_bg.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    main#home #intro h2 {
+      width: 34.0rem;
+      height: 5.0rem;
+      margin: 0 auto 5.5rem;
+      line-height: 0;
+    }
+
+    main#home #intro .catch {
+      margin: 0 auto 5.5rem;
+      font-size: 2.4rem;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    main#home #intro .flex {
+      display: flex;
+      justify-content: space-between;
+      width: 93.0rem;
+      margin: 0 auto;
+    }
+
+    main#home #intro .flex .img {
+      width: 44.1rem;
+      margin-top: 2.0rem;
+    }
+
+    main#home #intro .flex .img img {
+      mix-blend-mode: multiply;
+    }
+
+    main#home #intro .flex .txtArea {
+      width: 44.0rem;
+      font-size: 1.4rem;
+      letter-spacing: 0;
+    }
+
+    main#home #intro .flex .txtArea .jp {
+      margin-bottom: 2em;
+      line-height: calc(33 / 14);
+    }
+
+    main#home #intro .flex .txtArea .en {
+      line-height: calc(29 / 14);
+    }
+    /* intro end  */
+    /* lineup begin  */
+    /* lineup end  */
+    /* shop begin  */
+    /* shop end */
+/* -----------  main  contents end ------------------- */
