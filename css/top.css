@@ -1,7 +1,16 @@
 @charset "utf-8";
 
+html {
+  margin: 0 0;
+}
+
 body{
   font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  margin:0 0;
+}
+
+header{
+  display: block;
 }
 
 .CenturyGothicBold {
@@ -21,13 +30,14 @@ ol, ul {
 
 #header{
   position: absolute;
-  top: 7.5rem;
+  top: 5.0rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 997;
 }
 
 #header .logo {
+  margin: 0 0;
   width: 282px;
 }
 
@@ -41,115 +51,78 @@ img {
   height: auto;
 }
 
-
-/* -------------------  gnavBtn  begin  ---------------------------- */
-body.opened #gnavBtn span {
-  opacity: 0;
-}
-
-body.opened #gnavBtn span::before, body.opened #gnavBtn span::after {
-  transform-origin: 50%;
-}
-
-body.opened #gnavBtn span::before{
-  top: 50%;
-  transform: translateY(-50%) rotate(-25deg);
-}
-
-body.opened #gnavBtn span::after{
-  top: 50%;
-  transform: translateY(-50%) rotate(25deg);
-} 
-
-/*menu*/
-/* 
+/*--------------------  menu  begin   -----------------------*/
 .menu{
-  height: 20px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 30px;
-  z-index: 99;
-}
-.menu__line{
-  background: #a9808C;
-  display: block;
-  height: 2px;
-  position: absolute;
-  transition:transform .3s;
-  width: 100%;
-}
-.menu__line--center{
-  top: 9px;
-}
-.menu__line--bottom{
-  bottom: 0;
-}
-.menu__line--top.active{
-  top: 8px;
-  transform: rotate(45deg);
-}
-.menu__line--center.active{
-  transform:scaleX(0);
-}
-.menu__line--bottom.active{
-  bottom: 10px;
-  transform: rotate(135deg);
-} */
-/* --------------------------------------------- */
-#gnavBtn {
   position: fixed;
-  top: 5.5rem;
+  top: 4.0rem;
   right: 5.5rem;
   z-index: 999;
-  width: 5.4rem;
-  height: 3.6rem;
+  width: 4.4rem;
+  height: 3.0rem;
   cursor: pointer;
 }
-
-#gnavBtn span {
-  transition: .25s ease-out;
+.menu__line{
+  transition: .3s ease-out;
   position: absolute;
+  
+  /* display: block; */
+  
+  width: 100%;
+  height: 4px;
+  background-color: #a9808C;
+}
+.menu__line--top{
+  top: 0;
+  left: 0;
+}
+
+.menu__line--center{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 4px;
-  background-color: #a9808C;
+  /* top: 9px; */
 }
-
-#gnavBtn span::before, #gnavBtn span::after{
-  /* css変化のspeed */
-  transition: .25s ease-out;
-  position: absolute;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #a9808C;
-}
-
-#gnavBtn::before{
-  top: 0;
-}
-
-#gnavBtn::after {
+.menu__line--bottom{
+  left:0;
   top: 90%;
+  /* bottom: 0; */
+}
+.menu__line--top.active{
+  top: 50%;
+  transform-origin: 50%;
+  transform: rotate(45deg);
+}
+.menu__line--center.active{
+  /* transform:scaleX(0); */
+  opacity: 0;
+}
+.menu__line--bottom.active{
+  /* bottom: 10px; */
+  top: 50%;
+  transform-origin: 50%;
+  transform: rotate(135deg);
 } 
-/* ----------------------------------------------------- */
-body.opened #gnav {
-  opacity: 1;
-  pointer-events: all;
+
+/* -------------------------  menu end  -------------------- */
+
+
+/* ------------------------  gnav  begin  ----------------------------- */
+#gnav {
+  background-color: #fff;
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 998;
+  /* transition: .25s ease-out; */
+  /* pointer-events: none; */
+  padding: 8vh 0;
 }
 
-#gnav {
-  transition: .25s ease-out;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
+#gnav_wrap {
+  /* position: absolute; */
   top: 0;
   left: 0;
-  z-index: 998;
   display: flex;
   /* flexbox内の要素を積み重なるように配置 */
   flex-direction: column;
@@ -157,13 +130,10 @@ body.opened #gnav {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 8vh 0;
-  background-color: #fff;
 }
 
 #gnav .logo img {
+
   width: 15.0rem;
 }
 
