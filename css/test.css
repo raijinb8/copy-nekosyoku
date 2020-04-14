@@ -71,46 +71,6 @@
 	background-image: url(../img/pochi1.jpg);
 	background-position: 50% 50%;
 	background-size: cover;
+	width: 100%;
 	height: 100vh;
 }
-
-/* --------------------  gnavBtn  begin  ----------------------------- */
-#gnavBtn {
-  position: fixed;
-  top: 5.5rem;
-  right: 5.5rem;
-  z-index: 999;
-  width: 5.4rem;
-  height: 3.6rem;
-  cursor: pointer;
-}
-
-#gnavBtn span {
-  transition: .25s ease-out;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 4px;
-  background-color: #a9808C;
-}
-
-#gnavBtn span::before, #gnavBtn span::after{
-  /* css変化のspeed */
-  transition: .25s ease-out;
-  position: absolute;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #a9808C;
-}
-
-#gnavBtn::before{
-  top: 0;
-}
-
-#gnavBtn::after {
-  top: 90%;
-} 
