@@ -2,6 +2,7 @@
 <html lang="ja">
   <head>
     <title>copy-ねこねこ食パン</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/top.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
@@ -9,90 +10,82 @@
   <body>
     <!-- header  begin   -->
   <header id="header">
-    <h1 class="logo">
-      <a href="#" class="fade" style="opacity: 1;"> 
-        <img src="https://nekoshoku.jp/cms/wp-content/themes/nekoshoku/images/logo.png" alt="ロゴ">
-      </a>
-    </h1>
+      <h1 class="logo">
+          <a href="#" class="fade" style="opacity: 1;"> 
+            <img src="https://nekoshoku.jp/cms/wp-content/themes/nekoshoku/images/logo.png" alt="ロゴ">
+          </a>
+      </h1>
   </header>
   <!-- header  end   -->
 
-  <!-- <div id="gnavBtn">
-    <span></span>
-  </div> -->
-  
+  <!-- menu begin -->
   <a class="menu">
-    <span class="menu__line menu__line--top"></span>
-    <span class="menu__line menu__line--center"></span>
-    <span class="menu__line menu__line--bottom"></span>
+      <span class="menu__line menu__line--top"></span>
+      <span class="menu__line menu__line--center"></span>
+      <span class="menu__line menu__line--bottom"></span>
   </a>
+  <!-- menu end -->
 
   <!--  gnav  begin  -->
   <nav id="gnav">
-    <div class="logo">
-      <img src="https://nekoshoku.jp/cms/wp-content/themes/nekoshoku/images/logo.png" alt="ロゴ">
-    </div>
-    <ul class="list">
-      <li>
-        <a href="https://nekosyoku.jp/news">
-          <span class="en CenturyGothicBold">NEWS</span>
-          <span class="jp">お知らせ</span> 
-        </a>
-      </li>
-      <li>
-        <a href="https://nekosyoku.jp/shop">
-          <span class="en CenturyGothicBold">SHOP</span>
-          <span class="jp">店舗一覧</span> 
-        </a>
-      </li>
-    </ul>
-    <ul class="linkList CenturyGothicBold">
-      <li>
-        <a href="https://www.heart-bread.com/contact" target="_blank">
-        "CONTACT"
-        ::after
-        </a>
-      </li>
-      <li>
-        <a href="https://www.heart-bread.com/company" target="_blank">
-        "COMPANY"
-        ::after
-        </a>
-      </li>
-    </ul>
+      <div id="gnav_wrap">
+          <div class="logo">
+             <img src="https://nekoshoku.jp/cms/wp-content/themes/nekoshoku/images/logo.png" alt="ロゴ">
+          </div>
+          <ul class="list">
+              <li>
+                  <a href="https://nekosyoku.jp/news">
+                    <span class="en CenturyGothicBold">NEWS</span>
+                    <span class="jp">お知らせ</span> 
+                  </a>
+              </li>
+              <li>
+                  <a href="https://nekosyoku.jp/shop">
+                    <span class="en CenturyGothicBold">SHOP</span>
+                    <span class="jp">店舗一覧</span> 
+                  </a>
+              </li>
+            </ul>
+            <ul class="linkList CenturyGothicBold">
+                <li>
+                    <a href="https://www.heart-bread.com/contact" target="_blank">
+                    "CONTACT"
+                    ::after
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.heart-bread.com/company" target="_blank">
+                    "COMPANY"
+                    ::after
+                    </a>
+                </li>
+          </ul>
+      </div>
   </nav>
   <!--   gnav  end   -->
 
-  <!-- 1個目のSwiper START -->
-	<!-- Swiper START -->
+  <!-- Swiper START -->
 	<div class="swiper-container swiper1">
-		<!-- メイン表示部分 -->
-		<div class="swiper-wrapper">
-			<!-- 各スライド -->
-			<div class="swiper-slide"><img src="img/pochi1.jpg" alt="ポチの画像1"></div>
-			<div class="swiper-slide"><img src="img/pochi2.jpg" alt="ポチの画像2"></div>
-			<div class="swiper-slide"><img src="img/pochi3.jpg" alt="ポチの画像3"></div>
-		</div>
+      <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/pochi1.jpg" alt="ポチの画像1"></div>
+          <div class="swiper-slide"><img src="img/pochi2.jpg" alt="ポチの画像2"></div>
+          <div class="swiper-slide"><img src="img/pochi3.jpg" alt="ポチの画像3"></div>
+      </div>
 	</div>
-	<!-- Swiper END -->
-<!-- 1個目のSwiper END -->
 
-<!-- 2個目のSwiper START -->
-	<!-- Swiper START -->
 	<div class="swiper-container swiper2">
-		<!-- メイン表示部分 -->
-		<div class="swiper-wrapper">
-      <!-- 各スライド -->
-      <div class="swiper-slide"><img src="img/pochi4.jpg" alt="ポチの画像4"></div>
-      <div class="swiper-slide"><img src="img/pochi5.jpg" alt="ポチの画像5"></div>
-			<div class="swiper-slide"><img src="img/pochi6.jpg" alt="ポチの画像6"></div>			
-		</div>
+      <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/pochi4.jpg" alt="ポチの画像4"></div>
+          <div class="swiper-slide"><img src="img/pochi5.jpg" alt="ポチの画像5"></div>
+          <div class="swiper-slide"><img src="img/pochi6.jpg" alt="ポチの画像6"></div>			
+      </div>
 	</div>
-	<!-- Swiper END -->
-<!-- 2個目のSwiper END -->
+<!-- Swiper END -->
+
+  
+
     
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="js/top.js"></script>
   </body>
 </html>
